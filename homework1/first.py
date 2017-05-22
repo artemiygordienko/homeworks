@@ -4,4 +4,4 @@
 area = 10
 beds_x = 15
 beds_y = 25
-print(area * 100 - beds_x * beds_y)
+print((area * 100) % (beds_x * beds_y))
