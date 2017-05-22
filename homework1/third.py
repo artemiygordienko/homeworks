@@ -19,11 +19,12 @@ c = {
 }
 
 lines = {
-    'AB': (b['x'] - a['x']) + (b['y'] - a['y']),
-    'AC': (c['x'] - a['x']) + (c['y'] - a['y']),
-    'BC': (c['x'] - b['x']) + (c['y'] - b['y']),
+    'AB': (b['x'] - a['x']) ** 2 + (b['y'] - a['y']) ** 2,
+    'AC': (c['x'] - a['x']) ** 2 + (c['y'] - a['y']) ** 2,
+    'BC': (c['x'] - b['x']) ** 2 + (c['y'] - b['y']) ** 2,
 }
-if lines['AB'] == lines['AC'] + lines['BC'] or lines['AC'] == lines['AB'] + lines['BC'] or lines['BC'] == lines['AB']+ lines['AC']:
+if lines['AB'] == lines['AC'] + lines['BC'] or lines['AC'] == lines['AB'] + lines['BC'] or lines['BC'] == lines['AB'] + \
+        lines['AC']:
     print('Этот треугольник прямоугольный')
 else:
     print('Этот треугольник не прямоугольный')
