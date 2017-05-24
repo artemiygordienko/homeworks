@@ -14,5 +14,6 @@ def coordinates(x, y):
         return False
 
 
-a=coordinates(int(input('Координата Х: ')), int(input('Координата Y: ')))
+a = coordinates(int(input('Координата Х: ')), int(input('Координата Y: ')))
 print(a)
+
