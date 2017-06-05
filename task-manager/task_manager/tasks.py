@@ -72,11 +72,11 @@ def restart():
         task = storage.find_task_by_id(task_id)
         if not task:
             print('Задача с таким номером не найдена!')
-        elif task['status'] in [TASK_STATUS_OPEN, TASK_STATUS_REOPEN]:
+        elif task[0]['status'] in [TASK_STATUS_OPEN, TASK_STATUS_REOPEN]:
             print('Задача уже открыта.')
             break
         else:
-            storage.change_task_status(task_id, TASK_STATUS_REOPEN)
+            storage.change_status(task_id, TASK_STATUS_REOPEN)
             print('Задача пересоздана.')
             break
 

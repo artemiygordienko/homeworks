@@ -7,7 +7,7 @@ FROM task_man
 '''
 
 SQL_SELECT_TASK_BY_ID = '''
-SELECT name, task_text, end_date, end_date
+SELECT name, task_text, status, start_date, end_date
 FROM task_man
 WHERE id = ?
 '''
@@ -31,7 +31,7 @@ WHERE id = ?
 
 SQL_CHANGE_STATUS = '''
 UPDATE task_man
-SET status = ?, date = CURRENT_TIMESTAMP, end_date = ''
+SET status = ?, start_date = CURRENT_TIMESTAMP, end_date = ''
 WHERE id = ?
 '''
 
